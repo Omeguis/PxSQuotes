@@ -23,7 +23,24 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Press Stars</title>
+        <script>
+        function GetValue()
+        {
+            var myarray= new Array
+            (
+            "item1",
+            "item2b",
+            "item2c",
+            "item2d",
+            "item2e",
+            "item2f",               
+            "item3"
+            );
+            var random = myarray[Math.floor(Math.random() * myarray.length)];
+           document.getElementById("message").innerHTML=random;
+        }
+        </script>        
     </head>
     <body>
         <div class="app">
@@ -32,7 +49,8 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready AND READY TO ROOOOCK</p>
             </div>
-            <h1>OLA K ASE</h1>
+            <input type="button" id="btnSearch" value="Hit me!" onclick="GetValue();" />
+            <p id="message" >La quote es...</p>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
